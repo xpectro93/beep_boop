@@ -1,13 +1,15 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Teko&display=swap");
+
+:root {
+  --text-color: rgb(247, 247, 247);
+  --main-color: #e5398c;
+  --off-color: rgb(109, 249, 247, 0.6);
+  --font-main: "Press Start 2P", cursive;
+  --font-text: "Teko", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  padding: 0;
 }
+
