@@ -1,6 +1,6 @@
 import './App.css';
 import Menu from './components/Menu.js'
-
+import Footer from "./components/Footer.js";
 
 function App() {
   return (
@@ -9,6 +9,7 @@ function App() {
       <div className="main-wrapper">
         <Menu/>
       </div>
+      <Footer/>
     </div>
   );
 }
