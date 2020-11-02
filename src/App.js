@@ -3,7 +3,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      Good bye world
+      <div className="background-static"></div>
     </div>
   );
 }
