@@ -8,6 +8,8 @@
     animation: 120s panorama infinite linear;
     justify-content: center;
     align-items:center;
+    width:100%;
+    flex-flow:row wrap
 }
 #name-container > h1 {
     color: red;
@@ -24,10 +26,10 @@
     text-align: center;
 }
 #me {
-    margin:25px;
+    /* margin:10px; */
     background-image: url("../assets/pixel_me.png");
-    width: 250px;
-    height: 250px;
+    width: 25vw;
+    min-height: 25vw;
     border-radius: 50%;
     image-rendering: pixelated;
     opacity: 0.85;

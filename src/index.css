@@ -23,11 +23,11 @@ body {
 
 h1 {
   max-width: max-content;
-  font-size: 50px;
+  font-size: 45px;
   font-family: var(--font-main);
   border-bottom: 3px solid var(--main-color);
   opacity: 0.6;
-  /* box-shadow: 3px 2px 3px var(--main-color); */
+  margin:auto 10px;
 }
 .retro {
   color: var(--text-color);
@@ -39,4 +39,9 @@ h2 {
   color: var(--text-color);
   text-shadow: 0 0 3px var(--main-color);
   font-family:"Teko", sans-serif;
+}
+@media only screen and (max-width: 385px) {
+  h1 {
+    font-size:25px;
+  }
 }
