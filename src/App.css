@@ -22,9 +22,9 @@
   opacity: 0.9;
   visibility: visible;
 }
-/* .main-wrapper {
+.main-wrapper {
   width:80%;
-} */
+}
 #footer {
   position:fixed;
   font-family: var(--font-main);
@@ -73,6 +73,6 @@
 
 @media only screen and (max-width: 500px) {
   #main-wrapper {
-      width:100%;
+      width:100vw;
   }
 }

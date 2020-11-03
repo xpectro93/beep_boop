@@ -6,7 +6,7 @@
     background-size: cover;
     image-rendering: pixelated;
     animation: 120s panorama infinite linear;
-    justify-content: center;
+    justify-content:space-around;
     align-items:center;
     width:100%;
     flex-flow:row wrap
@@ -28,8 +28,8 @@
 #me {
     /* margin:10px; */
     background-image: url("../assets/pixel_me.png");
-    width: 25vw;
-    min-height: 25vw;
+    width: 15vw;
+    min-height: 15vw;
     border-radius: 50%;
     image-rendering: pixelated;
     opacity: 0.85;
@@ -48,5 +48,11 @@
 @keyframes panorama {
     100% {
         background-position: -5000px 0%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #me::before {
+        font-size:15px
     }
 }
