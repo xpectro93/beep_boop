@@ -6,7 +6,13 @@
     background-size: cover;
     image-rendering: pixelated;
     animation: 120s panorama infinite linear;
+    justify-content: center;
+    align-items:center;
 }
+#name-container > h1 {
+    color: red;
+    margin: 0 auto;
+  }
 
 #me::before {
     content: "JA";
@@ -15,10 +21,26 @@
     color: var(--text-color);
     text-shadow: 0px 0px 10px var(--main-color);
     opacity: 1;
+    text-align: center;
 }
 #me {
     margin:25px;
-    
+    background-image: url("../assets/pixel_me.png");
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    image-rendering: pixelated;
+    opacity: 0.85;
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 2px -2px 1px 1px rgb(255, 0, 21, 0.6),
+        -2px 2px 1px 1px rgb(109, 249, 247, 0.6);
+
+    transition: background-image 0.5s ease-in-out;
+}
+#me:hover {
+    background-image: url("../assets/me.png")
 }
 
 @keyframes panorama {

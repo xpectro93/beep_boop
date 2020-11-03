@@ -5,8 +5,8 @@ export default function Banner () {
         <div id="main-banner">
             <div id="me"></div>
             <div id="title-container">
-                <h1>Jonathan</h1>
-                <h1>Andrade</h1>
+                <h1 className="retro">Jonathan</h1>
+                <h1 className="retro">Andrade</h1>
                 <h2>FullStack Web Developer</h2>
             </div>
         </div>
