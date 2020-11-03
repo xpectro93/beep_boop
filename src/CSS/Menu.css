@@ -16,6 +16,7 @@ ul {
     list-style: none;
     margin:auto;
     align-content: center;
+    border:2px red solid
 }
 
 li {
