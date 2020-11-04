@@ -1,6 +1,6 @@
 import {useState, useEffect } from "react";
 import wave from "../assets/wave.gif";
-import "../CSS/Menu.css"
+import "../CSS/Content.css"
 import { motion } from 'framer-motion';
 
 const menuItems = ["About me","Contact me", "Technologies","Projects"];
@@ -8,7 +8,7 @@ const variants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1 },
   }
-export default function Menu () {
+export default function Content () {
     const [ hasStarted, setHasStarted ] = useState(false);
 
     const handleStart = () => {
@@ -24,10 +24,10 @@ export default function Menu () {
     }, [])
 
     return (
-         <div id="menu">
+         <div id="content">
         { hasStarted ? 
         <>
-        <motion.div
+        <motion.div className="left"
             initial={{x:-300, opacity:0}}
             animate={{x:0, opacity:1}}
             exit={{ x: 300, opacity: 0 }}
@@ -35,14 +35,22 @@ export default function Menu () {
          >
             <img id="pixel-gif" src={wave} alt="gif of me"/>
         </motion.div>
-        <motion.ul
+
+        <motion.div className="right"
+
+
             initial={{x:300, opacity:0}}
             animate={{x:0, opacity:1}}
             exit={{ x: -300, opacity: 0 }}
             variants={variants}>
-        <li>{hasStarted.toString()}</li>
+        <ul>
+            <li>{hasStarted.toString()}</li>
             {menuItems.map(item => <li onClick={()=>console.log('clickedd')} key={`${item}`}>{item}</li>)}
-        </motion.ul>
+        </ul>
+        
+
+
+        </motion.div>
         </>
         : <motion.h1 
             initial={{scale:0.1, opacity:0}}

@@ -1,5 +1,5 @@
 import './App.css';
-import Menu from './components/Menu.js'
+import Content from './components/Content.js'
 import Footer from "./components/Footer.js";
 import Banner from './components/Banner.js';
 
@@ -10,12 +10,12 @@ function App() {
   return (
     <div className="App">
       <div className="background-static"></div>
-      <AnimatePresence initial={true} exitBeforeEnter>
+      <AnimatePresence initial={false} exitBeforeEnter>
 
         
         <div className="main-wrapper">
           <Banner/>
-          <Menu/>
+          <Content/>
         </div>
 
         <Footer/>
