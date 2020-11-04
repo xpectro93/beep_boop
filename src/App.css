@@ -24,6 +24,7 @@
 }
 .main-wrapper {
   width:80%;
+  min-height:100vh;
 }
 #footer {
   position:fixed;
