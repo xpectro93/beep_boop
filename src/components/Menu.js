@@ -1,9 +1,9 @@
 import {useState, useEffect } from "react";
 import wave from "../assets/wave.gif";
 import "../CSS/Menu.css"
-import { motion, useTransform, useMotionValue } from 'framer-motion';
+import { motion } from 'framer-motion';
 
-const menuItems = ["About me","Contact me", "Projects"];
+const menuItems = ["About me","Contact me", "Technologies","Projects"];
 const variants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1 },
@@ -22,8 +22,7 @@ export default function Menu () {
             setHasStarted(true);
         }
     }, [])
-    const x =  useMotionValue(0);
-    const opacity = useTransform(x, [-100, 0, 100], [0, 1, 0])
+
     return (
          <div id="menu">
         { hasStarted ? 
