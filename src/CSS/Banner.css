@@ -9,7 +9,8 @@
     justify-content:space-around;
     align-items:center;
     width:100%;
-    flex-flow:row wrap
+    flex-flow:row wrap;
+    box-shadow:0px 0px 15px var(--main-color)
 }
 #name-container > h1 {
     color: red;
@@ -26,7 +27,6 @@
     text-align: center;
 }
 #me {
-    /* margin:10px; */
     background-image: url("../assets/pixel_me.png");
     width: 15vw;
     min-height: 15vw;

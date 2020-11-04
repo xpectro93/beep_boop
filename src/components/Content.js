@@ -30,7 +30,7 @@ export default function Content () {
             setHasStarted(true);
         }
     }, [])
-
+    console.log(imgObj[selected], typeof selected)
     return (
          <div id="content">
         { hasStarted ? 
