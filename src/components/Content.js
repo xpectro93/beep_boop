@@ -1,8 +1,15 @@
 import {useState, useEffect } from "react";
-import wave from "../assets/wave.gif";
 import "../CSS/Content.css"
 import { motion } from 'framer-motion';
 
+//images
+import wave from "../assets/wave.gif";
+import pixel_me from "../assets/pixel_me.gif";
+
+const imgObj ={
+"About me": wave,
+"":pixel_me
+}
 const menuItems = ["About me","Contact me", "Technologies","Projects"];
 const variants = {
     hidden: { opacity: 0 },
@@ -10,7 +17,7 @@ const variants = {
   }
 export default function Content () {
     const [ hasStarted, setHasStarted ] = useState(false);
-    const [selected, setSelected ] = useState(null);
+    const [selected, setSelected ] = useState("");
 
     const handleStart = () => {
         localStorage.setItem("started","Ithas");
@@ -34,7 +41,7 @@ export default function Content () {
             exit={{ x: 300, opacity: 0 }}
             variants={variants}
          >
-            <img id="pixel-gif" src={wave} alt="gif of me"/>
+            <img id="pixel-gif" src={imgObj[selected]} alt="gif of me"/>
         </motion.div>
 
         <motion.div className="right"
@@ -59,7 +66,7 @@ export default function Content () {
             exit={{scale:0.1, opacity:0}}
             variants={variants}
             className={"btn retro"}
-             onClick={handleStart}> Start </motion.h1> }
+             onClick={handleStart}> Press Start </motion.h1> }
         </div> 
         
         
