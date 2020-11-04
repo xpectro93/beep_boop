@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <div className="background-static"></div>
-      <AnimatePresence initial={false} exitBeforeEnter>
+      <AnimatePresence initial={true} exitBeforeEnter>
 
         
         <div className="main-wrapper">

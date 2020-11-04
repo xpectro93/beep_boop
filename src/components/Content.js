@@ -10,6 +10,7 @@ const variants = {
   }
 export default function Content () {
     const [ hasStarted, setHasStarted ] = useState(false);
+    const [selected, setSelected ] = useState(null);
 
     const handleStart = () => {
         localStorage.setItem("started","Ithas");
@@ -43,10 +44,10 @@ export default function Content () {
             animate={{x:0, opacity:1}}
             exit={{ x: -300, opacity: 0 }}
             variants={variants}>
-        <ul>
-            <li>{hasStarted.toString()}</li>
-            {menuItems.map(item => <li onClick={()=>console.log('clickedd')} key={`${item}`}>{item}</li>)}
-        </ul>
+        <h2> { selected }</h2>
+        <motion.ul >
+            {menuItems.map(item => <li variants={item} onClick={()=>setSelected(`${item}`)} key={`${item}`}>{item}</li>)}
+        </motion.ul>
         
 
 
