@@ -5,16 +5,19 @@ import { motion } from 'framer-motion';
 //images
 import wave from "../assets/wave.gif";
 import pixel_me from "../assets/pixel_me.gif";
+import email from "../assets/email.gif";
 
 const imgObj ={
 "About me": wave,
-"":pixel_me
+"":pixel_me,
+"Contact me":email
 }
 const menuItems = ["About me","Contact me", "Technologies","Projects"];
 const variants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1 },
   }
+
 export default function Content () {
     const [ hasStarted, setHasStarted ] = useState(false);
     const [selected, setSelected ] = useState("");
@@ -25,12 +28,12 @@ export default function Content () {
     }
 
     useEffect(() => {
-        console.log(localStorage.getItem('started'))
+
         if(localStorage.getItem('started')) {
             setHasStarted(true);
         }
     }, [])
-    console.log(imgObj[selected], typeof selected)
+   
     return (
          <div id="content">
         { hasStarted ? 
@@ -52,9 +55,10 @@ export default function Content () {
             exit={{ x: -300, opacity: 0 }}
             variants={variants}>
         <h2> { selected }</h2>
-        <motion.ul >
-            {menuItems.map(item => <li variants={item} onClick={()=>setSelected(`${item}`)} key={`${item}`}>{item}</li>)}
-        </motion.ul>
+        <ul>
+            {menuItems.map(item => <li 
+            onClick={()=>setSelected(`${item}`)} key={`${item}`}>{item}</li>)}
+        </ul>
         
 
 
