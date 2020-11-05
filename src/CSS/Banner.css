@@ -45,6 +45,10 @@
     background-image: url("../assets/me.png")
 }
 
+#menu {
+    position:sticky
+}
+
 @keyframes panorama {
     100% {
         background-position: -5000px 0%;

@@ -6,6 +6,9 @@ import { motion } from 'framer-motion';
 import wave from "../assets/wave.gif";
 import pixel_me from "../assets/pixel_me.gif";
 import email from "../assets/email.gif";
+import bg from '../assets/test.gif';
+
+import AboutMe from './AbouMe.js'
 
 const imgObj ={
 "About me": wave,
@@ -44,6 +47,7 @@ export default function Content () {
             exit={{ x: 300, opacity: 0 }}
             variants={variants}
          >
+             
             <img id="pixel-gif" src={imgObj[selected]} alt="gif of me"/>
         </motion.div>
 
@@ -59,6 +63,10 @@ export default function Content () {
             {menuItems.map(item => <li 
             onClick={()=>setSelected(`${item}`)} key={`${item}`}>{item}</li>)}
         </ul>
+        {selected === "About me" ? 
+         <>
+            <AboutMe/>
+         </>:null}
         
 
 

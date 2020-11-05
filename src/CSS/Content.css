@@ -9,12 +9,10 @@
  border: 1px solid var(--main-color);
  box-shadow: 0px 0px 10px var(--off-color);
 
-
 }
 .left {
   width:30%;
   display: flex;
-
 }
 
 .right {
@@ -26,6 +24,7 @@
 #pixel-gif {
     width:75%;
     margin: auto;
+    
 }
 
 .btn {
