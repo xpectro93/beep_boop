@@ -62,9 +62,11 @@ export default function Content () {
     }, [])
    
     return (
-         <div className="nes-container is-rounded is-dark content" style={{margin:"5vh auto"}}>
+         <div className="nes-container  is-dark  content" 
+            style={{margin:"5vh auto",padding:"0px"}}>
         { hasStarted ? 
         <>
+        <div id="titulo" className="retro">{selected}</div>
         <motion.div className="left"
             initial={{x:-300, opacity:0}}
             animate={{x:0, opacity:1}}
@@ -82,7 +84,6 @@ export default function Content () {
             animate={{x:0, opacity:1}}
             exit={{ x: -300, opacity: 0 }}
             variants={variants}>
-        <h2> { selected }</h2>
 
         <ul style={{listStyle: "none",margin:"auto"}}>
             {menuItems.map(item =>  {

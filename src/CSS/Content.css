@@ -14,7 +14,17 @@
   width:30%;
   display: flex;
 }
-
+#titulo{
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color:var(--text-color);
+  max-width: max-content;
+  background-color: #212529;
+}
 .right {
   width:70%;
   display: flex;
