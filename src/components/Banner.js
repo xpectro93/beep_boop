@@ -24,9 +24,6 @@ export default function Banner () {
 
                 <h1 className="retro">Andrade</h1>
                 <h2>FullStack Web Developer</h2>
-                <button id="menu">
-                    MENU
-                </button>
             </div>
         </motion.div>
     )

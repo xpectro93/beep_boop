@@ -6,7 +6,6 @@ import { motion } from 'framer-motion';
 import wave from "../assets/wave.gif";
 import pixel_me from "../assets/pixel_me.gif";
 import email from "../assets/email.gif";
-import bg from '../assets/test.gif';
 
 import AboutMe from './AbouMe.js'
 
