@@ -13,7 +13,7 @@ function App() {
       <AnimatePresence initial={true} exitBeforeEnter>
 
         
-        <div className="main-wrapper">
+        <div className="main-wrapper" key={"main-wrapper"}>
           <Banner/>
           <Content/>
         </div>

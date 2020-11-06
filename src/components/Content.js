@@ -7,23 +7,37 @@ import "nes.css/css/nes.min.css";
 import wave from "../assets/wave.gif";
 import pixel_me from "../assets/pixel_me.gif";
 import email from "../assets/email.gif";
+import js from "../assets/leJS.png"
+import myThings from '../assets/test.gif'
 
 //component Import
 import AboutMe from './AbouMe.js'
 import ContactMe from "./ContactMe.js"
+import Technologies from "./Technologies.js"
+import Projects from "./Projects.js"
 
 
-const imgObj ={
+const contentObject ={
+"":{
+    content: function lol(){return 'lol'},
+    images:pixel_me
+},
 "About me": {
     content: AboutMe,
     images:wave
 },
-"":{
-    content: function lol(){return 'lol'},
-    images:pixel_me
+"Contact me":{
+    content:ContactMe,
+    images:email
+},
+"Technologies": {
+    content:Technologies,
+    images: js
+},
+"Projects": {
+    content:Projects,
+    images:myThings
 }
-// ,
-// "Contact me":email
 }
 const menuItems = ["About me","Contact me", "Technologies","Projects"];
 const variants = {
@@ -58,7 +72,7 @@ export default function Content () {
             variants={variants}
          >
              
-            <img id="pixel-gif" src={imgObj[selected]["images"]} alt="gif of me"/>
+            <img id="pixel-gif" src={contentObject[selected]["images"]} alt="gif of me"/>
         </motion.div>
 
         <motion.div className="right"
@@ -73,10 +87,10 @@ export default function Content () {
         <ul style={{listStyle: "none",margin:"auto"}}>
             {menuItems.map(item =>  {
                 return (
-                    <>
+                    <div className="item" key={`${item}-i`}>
                     <li onClick={()=>setSelected(`${item}`)} key={`${item}`}>{item}</li>
-                    {selected === item ? imgObj[selected]["content"]():null}
-                    </>
+                    {selected === item ? contentObject[selected]["content"]():null}
+                    </div>
                 )
         
             
