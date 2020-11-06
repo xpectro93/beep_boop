@@ -13,7 +13,14 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+button {
+  background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
 body {
   background: #242025;
   overflow-x: hidden;

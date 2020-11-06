@@ -19,8 +19,10 @@
     url("http://assets.iceable.com/img/noise-transparent.png") repeat 0 0;
   background-repeat: repeat;
   animation: bg-animation 1s infinite;
-  opacity: 0.9;
+  opacity: 1;
   visibility: visible;
+  background-color: rgb(29, 33, 36);
+  z-index:-100
 }
 .main-wrapper {
   width:75%;

@@ -1,6 +1,7 @@
 import {useState, useEffect } from "react";
 import "../CSS/Content.css"
 import { motion } from 'framer-motion';
+import "nes.css/css/nes.min.css";
 
 //images
 import wave from "../assets/wave.gif";
@@ -58,7 +59,7 @@ export default function Content () {
             exit={{ x: -300, opacity: 0 }}
             variants={variants}>
         <h2> { selected }</h2>
-        <ul>
+        <ul style={{listStyle: "none",margin:"auto"}}>
             {menuItems.map(item => <li 
             onClick={()=>setSelected(`${item}`)} key={`${item}`}>{item}</li>)}
         </ul>
@@ -71,13 +72,11 @@ export default function Content () {
 
         </motion.div>
         </>
-        : <motion.h1 
-            initial={{scale:0.1, opacity:0}}
-            animate={{scale:1, opacity:1}}
-            exit={{scale:0.1, opacity:0}}
-            variants={variants}
-            className={"btn retro"}
-             onClick={handleStart}> Press Start </motion.h1> }
+        : <button 
+            className={"retro btn nes-btn"}
+            style ={{alignSelf: "center",
+                margin:"auto",color: "rgb(49,54,63)"}}
+             onClick={handleStart}> Press Start </button> }
         </div> 
         
         
