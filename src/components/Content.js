@@ -38,7 +38,7 @@ export default function Content () {
     }, [])
    
     return (
-         <div id="content">
+         <div className="nes-container is-rounded is-dark content" style={{margin:"5vh auto"}}>
         { hasStarted ? 
         <>
         <motion.div className="left"
