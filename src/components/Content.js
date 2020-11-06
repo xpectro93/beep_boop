@@ -8,12 +8,22 @@ import wave from "../assets/wave.gif";
 import pixel_me from "../assets/pixel_me.gif";
 import email from "../assets/email.gif";
 
+//component Import
 import AboutMe from './AbouMe.js'
+import ContactMe from "./ContactMe.js"
+
 
 const imgObj ={
-"About me": wave,
-"":pixel_me,
-"Contact me":email
+"About me": {
+    content: AboutMe,
+    images:wave
+},
+"":{
+    content: function lol(){return 'lol'},
+    images:pixel_me
+}
+// ,
+// "Contact me":email
 }
 const menuItems = ["About me","Contact me", "Technologies","Projects"];
 const variants = {
@@ -48,7 +58,7 @@ export default function Content () {
             variants={variants}
          >
              
-            <img id="pixel-gif" src={imgObj[selected]} alt="gif of me"/>
+            <img id="pixel-gif" src={imgObj[selected]["images"]} alt="gif of me"/>
         </motion.div>
 
         <motion.div className="right"
@@ -59,21 +69,30 @@ export default function Content () {
             exit={{ x: -300, opacity: 0 }}
             variants={variants}>
         <h2> { selected }</h2>
+
         <ul style={{listStyle: "none",margin:"auto"}}>
-            {menuItems.map(item => <li 
-            onClick={()=>setSelected(`${item}`)} key={`${item}`}>{item}</li>)}
+            {menuItems.map(item =>  {
+                return (
+                    <>
+                    <li onClick={()=>setSelected(`${item}`)} key={`${item}`}>{item}</li>
+                    {selected === item ? imgObj[selected]["content"]():null}
+                    </>
+                )
+        
+            
+            }
+            
+            
+            )}
+                
+            
         </ul>
-        {selected === "About me" ? 
-         <>
-            <AboutMe/>
-         </>:null}
         
 
 
         </motion.div>
         </>
-        : <button 
-            className={"retro btn nes-btn"}
+        : <button className={"retro btn nes-btn is-round is-dark"}
             style ={{alignSelf: "center",
                 margin:"auto",color: "rgb(49,54,63)"}}
              onClick={handleStart}> Press Start </button> }
