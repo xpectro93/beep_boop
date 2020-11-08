@@ -1,9 +1,11 @@
 .about-me {
-  background:white;
   width: 50%;
   height: 50%;
   overflow: auto;
   margin: auto;
   position: absolute;
   top: 0; left: 0; bottom: 0; right: 0;
+  background:#212529;
+  border: 3px white solid;
+  z-index:3;
 }
