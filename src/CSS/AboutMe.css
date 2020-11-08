@@ -1,6 +1,6 @@
 .about-me {
-  width: 50%;
-  height: 50%;
+  width: 90%;
+  height: 90%;
   overflow: auto;
   margin: auto;
   position: absolute;
@@ -8,4 +8,5 @@
   background:#212529;
   border: 3px white solid;
   z-index:3;
+  padding:1rem;
 }
