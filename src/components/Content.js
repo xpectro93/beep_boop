@@ -10,6 +10,8 @@ import js from "../assets/leJS.png"
 import myThings from '../assets/test.gif'
 
 //component Import
+import Modal from '../Modal.js';
+
 import AboutMe from './AbouMe.js'
 import ContactMe from "./ContactMe.js"
 import Technologies from "./Technologies.js"
@@ -21,7 +23,7 @@ import Footer from "./Footer.js";
 
 const contentObject ={
 "":{
-    content: function lol(){return 'lol'},
+    content: function lol(){return ''},
     images:pixel_me
 },
 "About me": {
@@ -86,7 +88,8 @@ export default function Content () {
             animate={{x:0, opacity:1}}
             exit={{ x: -300, opacity: 0 }}
             variants={variants}>
-         {contentObject[selected]["content"](setSelected)}
+
+         {selected == "" ? null :<Modal select={setSelected} chilren={contentObject[selected]["content"]} />}
         <ul style={{listStyle: "none",margin:"auto"}}>
             {menuItems.map(item =>  {
                 return (
