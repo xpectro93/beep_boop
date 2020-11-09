@@ -79,4 +79,7 @@
   .main-wrapper {
       width:100%;
   }
+  #footer p{
+    font-size:9px;
+  }
 }

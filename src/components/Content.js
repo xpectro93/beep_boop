@@ -1,7 +1,6 @@
 import {useState, useEffect } from "react";
 import "../CSS/Content.css"
 import { motion } from 'framer-motion';
-// import "nes.css/css/nes.min.css";
 
 //images
 import wave from "../assets/wave.gif";
@@ -66,7 +65,7 @@ export default function Content () {
    
     return (
          <div className="nes-container  is-dark  content" 
-            style={{margin:"auto",padding:"0px", height:"74vh"}}>
+            style={{margin:"auto",padding:"0px", height:"74.5vh"}}>
         { hasStarted ? 
         <>
         <div id="titulo" className="retro">{selected}</div>
@@ -112,7 +111,7 @@ export default function Content () {
             style ={{alignSelf: "center",
                 margin:"auto",color: "rgb(49,54,63)"}}
              onClick={handleStart}> Press Start </button> }
-             <Footer/>
+             <Footer />
         </div> 
         
         
