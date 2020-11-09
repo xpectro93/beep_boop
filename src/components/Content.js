@@ -16,6 +16,9 @@ import ContactMe from "./ContactMe.js"
 import Technologies from "./Technologies.js"
 import Projects from "./Projects.js"
 
+import Footer from "./Footer.js";
+
+
 
 const contentObject ={
 "":{
@@ -63,7 +66,7 @@ export default function Content () {
    
     return (
          <div className="nes-container  is-dark  content" 
-            style={{margin:"5vh auto",padding:"0px"}}>
+            style={{margin:"auto",padding:"0px", height:"74vh"}}>
         { hasStarted ? 
         <>
         <div id="titulo" className="retro">{selected}</div>
@@ -84,7 +87,7 @@ export default function Content () {
             animate={{x:0, opacity:1}}
             exit={{ x: -300, opacity: 0 }}
             variants={variants}>
-
+         {contentObject[selected]["content"](setSelected)}
         <ul style={{listStyle: "none",margin:"auto"}}>
             {menuItems.map(item =>  {
                 return (
@@ -102,13 +105,14 @@ export default function Content () {
                 
                
         </ul>
-        {contentObject[selected]["content"](setSelected)}
+        
         </motion.div>
         </>
         : <button className={"retro btn nes-btn is-round is-dark"}
             style ={{alignSelf: "center",
                 margin:"auto",color: "rgb(49,54,63)"}}
              onClick={handleStart}> Press Start </button> }
+             <Footer/>
         </div> 
         
         
@@ -117,3 +121,4 @@ export default function Content () {
 /*
     Change left side gif for each tab selected from menu
 */
+

@@ -28,7 +28,7 @@
   width:75%;
 }
 #footer {
-  position:fixed;
+  position: absolute;
   font-family: var(--font-main);
   color:var(--text-color);
   bottom:0;
@@ -36,6 +36,8 @@
   width:100%;
   text-align: center;
   margin-bottom: 5px;
+} #footer p {
+  margin: 2px;
 }
 @keyframes bg-animation {
   0% {
