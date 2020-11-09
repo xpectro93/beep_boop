@@ -89,7 +89,7 @@ export default function Content () {
             exit={{ x: -300, opacity: 0 }}
             variants={variants}>
 
-         {selected == "" ? null :<Modal select={setSelected} chilren={contentObject[selected]["content"]} />}
+        {selected === "" ? null :<Modal select={setSelected}>{contentObject[selected]["content"]()}</Modal> }
         <ul style={{listStyle: "none",margin:"auto"}}>
             {menuItems.map(item =>  {
                 return (

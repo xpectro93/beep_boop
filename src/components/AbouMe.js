@@ -2,7 +2,7 @@ import "../CSS/AboutMe.css"
 import "nes.css/css/nes.min.css";
 import { motion }  from 'framer-motion'; 
 
-export default function AboutMe (something) {
+export default function AboutMe () {
     
     return(
         <motion.div
@@ -12,7 +12,6 @@ export default function AboutMe (something) {
             
             className ="about-me">
            <p>Good morning. Thou hast had a good night's sleep, I hope.</p>
-           <button style={{background:"white"}} onClick={()=>something('')}>Close</button>
         </motion.div>
     )
 };

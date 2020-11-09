@@ -3,7 +3,6 @@ import "nes.css/css/nes.min.css";
 import { motion }  from 'framer-motion'; 
 
 export default function Modal (props) {
-    console.log(props)
     return(
         <motion.div
             initial={{scale:0}}
