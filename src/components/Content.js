@@ -1,7 +1,7 @@
 import {useState, useEffect } from "react";
 import "../CSS/Content.css"
 import { motion } from 'framer-motion';
-import "nes.css/css/nes.min.css";
+// import "nes.css/css/nes.min.css";
 
 //images
 import wave from "../assets/wave.gif";
@@ -90,7 +90,7 @@ export default function Content () {
                 return (
                     <div className="item" key={`${item}-i`}>
                     <li onClick={()=>setSelected(`${item}`)} key={`${item}`}>{item}</li>
-                    {selected === item ? contentObject[selected]["content"]():null}
+                    
                     </div>
                 )
         
@@ -100,11 +100,9 @@ export default function Content () {
             
             )}
                 
-            
+               
         </ul>
-        
-
-
+        {contentObject[selected]["content"](setSelected)}
         </motion.div>
         </>
         : <button className={"retro btn nes-btn is-round is-dark"}

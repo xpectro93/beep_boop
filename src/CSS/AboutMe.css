@@ -1,7 +1,7 @@
 .about-me {
   width: 90%;
   height: 90%;
-  overflow: auto;
+  /* overflow: auto; */
   margin: auto;
   position: absolute;
   top: 0; left: 0; bottom: 0; right: 0;
@@ -9,4 +9,5 @@
   border: 3px white solid;
   z-index:3;
   padding:1rem;
+  background:black;
 }
