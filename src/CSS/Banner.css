@@ -29,8 +29,8 @@
 }
 #me {
     background-image: url("../assets/pixel_me.png");
-    width: 15vw;
-    min-height: 15vw;
+    width: 10vw;
+    min-height: 10vw;
     border-radius: 50%;
     image-rendering: pixelated;
     opacity: 0.85;
