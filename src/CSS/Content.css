@@ -109,8 +109,13 @@ li:hover, .btn:hover {
     #pixel-gif {
       width:30%;
     }
-    .content > div, ul {
+    .content > div {
       width:100%;
+      
+    }
+    
+    ul {
+      width:90%
     }
 
     li {
