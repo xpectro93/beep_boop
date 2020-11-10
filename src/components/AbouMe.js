@@ -1,17 +1,13 @@
 import "../CSS/AboutMe.css"
 import "nes.css/css/nes.min.css";
-import { motion }  from 'framer-motion'; 
 
 export default function AboutMe () {
     
     return(
-        <motion.div
-            initial={{scale:0}}
-            animate={{ scale:1}}
-            transition={{ type: "spring", duration: 0.7 }}
-            
-            className ="about-me">
-           <p>Good morning. Thou hast had a good night's sleep, I hope.</p>
-        </motion.div>
+        <div className ="about-me">
+          <h1>Let me introduce myself</h1>
+          <p>Jonathan Andrade is the name. Coding is my game</p>
+          <p>Ever since I got my first computer I've had a passion for computers and anything tech related. While studying computer engineering, I found my passion for programming. Now after joining Pursuit, I am excited to expand my skills as a Full Stack Web Developer.</p>
+        </div>
     )
 };
