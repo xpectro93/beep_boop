@@ -10,5 +10,8 @@
     padding:1rem;
     background:black;
     display:flex;
-    flex-direction: row;
+    flex-direction: column;
  };
+ .le-modal button {
+   color:pink
+ }

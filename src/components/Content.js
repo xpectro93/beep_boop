@@ -57,7 +57,7 @@ export default function Content () {
         localStorage.setItem("started","Ithas");
         setHasStarted(true);
     }
-
+    console.log(selected)
     useEffect(() => {
 
         if(localStorage.getItem('started')) {
@@ -89,9 +89,9 @@ export default function Content () {
             exit={{ x: -300, opacity: 0 }}
             variants={variants}>
 
-        {selected === "" ? null :<Modal select={setSelected}>{contentObject[selected]["content"]()}</Modal> }
+        {selected === "" ? null :<Modal select={setSelected}>{contentObject[selected]["content"](setSelected)}</Modal> }
         <ul  className="nes-container is-dark is-centered with-title" style={{listStyle: "none",margin:"auto"}}>
-        <p class="title">MENU</p>
+        <p className="title">MENU</p>
             {menuItems.map(item =>  {
                 return (
                     <div className="item" key={`${item}-i`}>
