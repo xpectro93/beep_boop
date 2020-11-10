@@ -1,5 +1,5 @@
 .content{
- margin:1vh auto;
+ margin:1vh aauto;
  width:100%;
  height:100%;
  display:flex;
@@ -7,7 +7,7 @@
  min-height: 550px;
  text-align: center;
  border: 1px solid var(--off-color);
- box-shadow: 0px 0px 10px var(--off-color);
+ box-shadow: 0px 0px 20px var(--off-color);
 
 }
 .left {
@@ -51,6 +51,7 @@
 ul {
     list-style: none;
     margin:auto;
+    box-shadow: 0px 0px 10px var(--main-color);
 }
 
 li {
@@ -115,7 +116,8 @@ li:hover, .btn:hover {
     }
     
     ul {
-      width:90%
+      width:90%;
+      margin:10% auto;
     }
 
     li {

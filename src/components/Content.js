@@ -90,7 +90,7 @@ export default function Content () {
             variants={variants}>
 
         {selected === "" ? null :<Modal select={setSelected}>{contentObject[selected]["content"]()}</Modal> }
-        <ul  className="nes-container is-dark is-centered with-title" style={{listStyle: "none",margin:"10% auto"}}>
+        <ul  className="nes-container is-dark is-centered with-title" style={{listStyle: "none",margin:"auto"}}>
         <p class="title">MENU</p>
             {menuItems.map(item =>  {
                 return (

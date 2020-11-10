@@ -9,4 +9,6 @@
     z-index:10;
     padding:1rem;
     background:black;
-  }
+    display:flex;
+    flex-direction: row;
+ };
