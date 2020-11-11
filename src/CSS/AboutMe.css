@@ -7,6 +7,6 @@
         font-size:10px
     }
     .about-me button {
-        color:pink
+        color:var(--main-color);
     }
 }
