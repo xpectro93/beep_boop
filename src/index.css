@@ -48,12 +48,6 @@ h2 {
   font-family:"Teko", sans-serif;
 }
 
-
-.techs {
-  width:256px;
-  height:256px;
-  background-color: #e5398c;
-}
 @media only screen and (max-width: 600px) {
   h1 {
     font-size:25px;
