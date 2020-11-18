@@ -30,7 +30,7 @@ body {
 
 h1 {
   max-width: max-content;
-  font-size: 45px;
+  font-size: 40px;
   font-family: var(--font-main);
   border-bottom: 3px solid var(--main-color);
   opacity: 0.6;
@@ -47,6 +47,30 @@ h2 {
   text-shadow: 0 0 3px var(--main-color);
   font-family:"Teko", sans-serif;
 }
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+  padding:5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--text-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:#a72463; 
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background:var(--main-color);
+}
+
 
 @media only screen and (max-width: 600px) {
   h1 {

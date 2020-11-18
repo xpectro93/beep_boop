@@ -71,7 +71,7 @@ export default function Content () {
     const sml_ul_css  = isMobile ? "1vh auto" : "auto" 
     return (
          <div className="nes-container  is-dark  content" 
-            style={{margin:" 2vh auto",padding:"0px", height:"70vh"}}>
+            style={{margin:" 2vh auto",padding:"0px", height:"70vh", backgroundColor:"transparent"}}>
         { hasStarted ? 
         <>
         <div id="titulo" className="retro">{selected}</div>

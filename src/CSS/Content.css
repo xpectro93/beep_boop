@@ -30,6 +30,10 @@
   flex-direction: column;
   position: relative;
 }
+
+.overflow {
+  overflow:auto;
+}
 .item {
   position: relative;
 }

@@ -11,7 +11,7 @@ const images = importAll(require.context('../assets/technologies', false, /\.(pn
   
 export default function Technologies() {
     let keys = Object.keys(images);
-    return <div className={"technologies"}>
+    return <div className={"technologies overflow"}>
         {
             keys.map(picture => {
                 let [name] = picture.split(".")
