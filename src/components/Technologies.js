@@ -14,10 +14,11 @@ export default function Technologies() {
     return <div className={"technologies overflow"}>
         {
             keys.map(picture => {
-                let [name] = picture.split(".")
+                let [order, link] = picture.split("_")
+                let [name] =link.split('.')
                 return (
                 <div className={"tech"} key={`${picture}`}>
-                    <h3>{name}</h3>
+                    <h3 className={"retro"}>{name}</h3>
                     <img src={images[picture].default} alt={`${picture}`} />
                 </div>
                 )
@@ -26,7 +27,7 @@ export default function Technologies() {
         
         
         
-        }
+        
             
         </div>;
 }
