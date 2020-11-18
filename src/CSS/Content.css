@@ -9,6 +9,9 @@
  box-shadow: 0px 0px 20px var(--off-color);
 
 }
+.nes-container.is-dark::after {
+  background-color:transparent !important;
+}
 .left {
   width:30%;
   display: flex;
