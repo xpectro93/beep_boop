@@ -121,6 +121,7 @@ li:hover, .btn:hover {
 
     li {
       text-align: center;
+      font-size: 12px;
     }
     li::before {
       content: "‎"

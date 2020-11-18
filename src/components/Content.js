@@ -52,7 +52,7 @@ const variants = {
 export default function Content () {
     const [ hasStarted, setHasStarted ] = useState(false);
     const [selected, setSelected ] = useState("");
-    const [handle, setHandle] = useState(window.matchMedia("(max-width: 600px)").matches);
+    const [isMobile, setIsMobile] = useState(window.matchMedia("(max-width: 600px)").matches);
 
     const handleStart = () => {
         localStorage.setItem("started","Ithas");
@@ -63,11 +63,11 @@ export default function Content () {
         if(localStorage.getItem('started')) {
             setHasStarted(true);
         }
-        const handler = e => setHandle(e.matches)
+        const handler = e => setIsMobile(e.matches)
         window.matchMedia("(max-width: 600px)").addListener(handler);
 
     }, [])
-
+    const sml_ul_css  = isMobile ? "1vh auto" : "auto" 
     return (
          <div className="nes-container  is-dark  content" 
             style={{margin:" 2vh auto",padding:"0px", height:"70vh"}}>
@@ -93,7 +93,7 @@ export default function Content () {
             variants={variants}>
 
         {selected === "" ? null :<Modal select={setSelected}>{contentObject[selected]["content"](setSelected)}</Modal> }
-        <ul  className="nes-container is-dark is-centered with-title list-menu" style={{listStyle: "none",margin:"auto"}}>
+        <ul  className="nes-container is-dark is-centered with-title list-menu" style={{listStyle: "none",margin:sml_ul_css}}>
         <p className="title">MENU</p>
             {menuItems.map(item =>  {
                 return (
