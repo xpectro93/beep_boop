@@ -14,8 +14,8 @@ export default function Technologies() {
     return <div className={"technologies overflow"}>
         {
             keys.map(picture => {
-                let [order, link] = picture.split("_")
-                let [name] =link.split('.')
+                let link = picture.split("_")
+                let [name] =link[1].split('.')
                 return (
                 <div className={"tech"} key={`${picture}`}>
                     <h3 className={"retro"}>{name}</h3>

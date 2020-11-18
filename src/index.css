@@ -52,7 +52,6 @@ h2 {
 /* width */
 ::-webkit-scrollbar {
   width: 12px;
-  padding:5px;
 }
 
 /* Track */
@@ -75,5 +74,8 @@ h2 {
 @media only screen and (max-width: 600px) {
   h1 {
     font-size:25px;
+  }
+  ::-webkit-scrollbar {
+    width: 8px;
   }
 }
