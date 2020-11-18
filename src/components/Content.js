@@ -57,7 +57,6 @@ export default function Content () {
         localStorage.setItem("started","Ithas");
         setHasStarted(true);
     }
-    console.log(selected)
     useEffect(() => {
 
         if(localStorage.getItem('started')) {
