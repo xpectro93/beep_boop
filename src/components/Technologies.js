@@ -1,5 +1,5 @@
-
+import "../index.css"
 
 export default function Technologies() {
-    return "This b my technologies";
+    return <div className="techs"></div>;
 }
