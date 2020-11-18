@@ -52,6 +52,7 @@ const variants = {
 export default function Content () {
     const [ hasStarted, setHasStarted ] = useState(false);
     const [selected, setSelected ] = useState("");
+    const [handle, setHandle] = useState(window.matchMedia("(max-width: 600px)").matches);
 
     const handleStart = () => {
         localStorage.setItem("started","Ithas");
@@ -62,11 +63,14 @@ export default function Content () {
         if(localStorage.getItem('started')) {
             setHasStarted(true);
         }
+        const handler = e => setHandle(e.matches)
+        window.matchMedia("(max-width: 600px)").addListener(handler);
+
     }, [])
-   
+
     return (
          <div className="nes-container  is-dark  content" 
-            style={{margin:"auto",padding:"0px", height:"74.5vh"}}>
+            style={{margin:" 2vh auto",padding:"0px", height:"70vh"}}>
         { hasStarted ? 
         <>
         <div id="titulo" className="retro">{selected}</div>
@@ -89,7 +93,7 @@ export default function Content () {
             variants={variants}>
 
         {selected === "" ? null :<Modal select={setSelected}>{contentObject[selected]["content"](setSelected)}</Modal> }
-        <ul  className="nes-container is-dark is-centered with-title" style={{listStyle: "none",margin:"auto"}}>
+        <ul  className="nes-container is-dark is-centered with-title list-menu" style={{listStyle: "none",margin:"auto"}}>
         <p className="title">MENU</p>
             {menuItems.map(item =>  {
                 return (
