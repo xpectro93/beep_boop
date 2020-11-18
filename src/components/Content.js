@@ -16,6 +16,7 @@ import AboutMe from './AbouMe.js'
 import ContactMe from "./ContactMe.js"
 import Technologies from "./Technologies.js"
 import Projects from "./Projects.js"
+import Start from "./Start.js"
 
 import Footer from "./Footer.js";
 
@@ -114,10 +115,9 @@ export default function Content () {
         
         </motion.div>
         </>
-        : <button className={"retro btn nes-btn is-round is-dark"}
-            style ={{alignSelf: "center",
-                margin:"auto",color: "rgb(49,54,63)"}}
-             onClick={handleStart}> Press Start </button> }
+        :
+        <Start handleStart={handleStart} isMobile={isMobile}/>
+              }
              <Footer />
         </div> 
         
