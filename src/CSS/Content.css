@@ -33,7 +33,9 @@
   flex-direction: column;
   position: relative;
 }
-
+.social img {
+  width:25px
+}
 .overflow {
   overflow:auto;
 }

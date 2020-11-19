@@ -9,6 +9,11 @@ import email from "../assets/email.gif";
 import tech from "../assets/floating_tech.gif"
 import myThings from '../assets/test.gif'
 
+//social
+import resume from "../assets/resume.png";
+import linkedin from "../assets/linkedin.png";
+import github from "../assets/technologies/8_Github.png";
+
 //component Import
 import Modal from '../Modal.js';
 
@@ -111,8 +116,13 @@ export default function Content () {
             
             )}
                 
-               
+        <div className="social" style={{display:"flex", justifyContent:"space-around"}}>
+            <a href="https://www.linkedin.com/in/xpectro93/" rel="noreferrer" target="_blank"><img src={linkedin} alt={"linkedin"}/></a>
+            <a href="https://github.com/xpectro93" rel="noreferrer" target="_blank" ><img src={github} alt={"github"}/></a>
+            <a href="" target="_blank" ><img src={resume} alt={"resume"}/></a>
+        </div>   
         </ul>
+        
         
         </motion.div>
         </>
