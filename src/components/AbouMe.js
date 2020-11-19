@@ -13,7 +13,7 @@ export default function AboutMe ({select}) {
           <h1 className="retro">Let me introduce myself</h1>
           <p>Jonathan Andrade is the name. Coding is my game</p>
           <p>
-            Ever since I got my first computer I've had a passion for computers and 
+            Ever since I moved to the USA and got my first computer I've had a passion for computers and 
             anything tech related. While studying computer engineering, I found my passion
             for programming.Through joining Pursuit, I expanded my skills as
             a FullStack Web Developer. After

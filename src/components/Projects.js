@@ -1,5 +1,11 @@
 import "../CSS/Projects.css"
-
+function importAll(r) {
+    let images = {};
+    r.keys().map((item) => images[item.replace('./', '')] = r(item));
+    return images;
+  }
+  
+const bbimages = importAll(require.context('../assets/projects/Bluebadger', false, /\.(png|jpe?g|svg)$/));
 const projects = [
     {
       title:"Envizo",
