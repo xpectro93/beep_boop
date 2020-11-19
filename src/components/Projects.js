@@ -20,37 +20,32 @@ import path3 from '../assets/projects/Pathfinder/Pathfinder_3.PNG';
 import path4 from '../assets/projects/Pathfinder/Pathfinder_4.PNG';
 
 
-
-
-
-
-// let keys = Object.keys();
 const projects = [
     {
       title:"Envizo",
       text:"Blah environment blah",
-      image:"www.image.com",
+      images:[evz1, evz2, evz3, evz4],
       github:"https://github.com/xpectro93/myEnvizo",
       live:"https://myenvizo.herokuapp.com/"
     },
     {
       title:"Bluebadger",
       text:"I hate my life",
-      image:"sad image",
+      images:[bb1,bb2,bb3,bb4],
       github:"https://github.com/xpectro93/BB-Den",
       live:"http://bluebadger.army/"
     },
     {
       title:"Stonks",
       text:"Meme profits are going up",
-      image:"www.sadmage.com",
+      images:[stnk1,stnk2,stnk3,stnk4],
       github:"https://github.com/xpectro93/TTP_Fullstack",
       live:"http://ttp-fs-jonathanandrade.herokuapp.com/"
     },
     {
       title:"Pathfinder",
       text:"Finds the path",
-      image:"www.path.com",
+      images:[path1,path2,path3,path4],
       github:"https://github.com/xpectro93/Pathfinder",
       live:"https://xpectro93.github.io/Pathfinder"
     },
@@ -60,7 +55,20 @@ const projects = [
 export default function Projects () {
     return (
         <div className="projects overflow">
+            {
+                projects.map((project,i) => {
+                    return(
+                        <div className="project" key={i}>
+                            <h3 className="retro">{project.title}</h3>
+                            {project.images.map(img => <img style={{width:"100px"}}src={img} alt="something cool" />)}
+                            <p>{project.text}</p>
+                            <a href={project.github}  rel="noreferrer" target="_blank">Github</a>
+                            <a href={project.link}  rel="noreferrer" target="_blank">Live Link</a>
 
+                        </div>
+                    )
+                })
+            }
         </div>
     )
 }
