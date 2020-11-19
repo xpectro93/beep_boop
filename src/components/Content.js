@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import wave from "../assets/wave.gif";
 import pixel_me from "../assets/pixel_me.gif";
 import email from "../assets/email.gif";
-import tech from "../assets/tech.gif"
+import tech from "../assets/floating_tech.gif"
 import myThings from '../assets/test.gif'
 
 //component Import
