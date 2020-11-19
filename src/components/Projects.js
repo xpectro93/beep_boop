@@ -5,7 +5,11 @@ function importAll(r) {
     return images;
   }
   
-const bbimages = importAll(require.context('../assets/projects/Bluebadger', false, /\.(png|jpe?g|svg)$/));
+const bbImages = importAll(require.context('../assets/projects/Bluebadger', false, /\.(png|jpe?g|svg)$/));
+const pathImages = importAll(require.context('../assets/projects/Pathfinder', false, /\.(png|jpe?g|svg)$/));
+const envizoImages = importAll(require.context('../assets/projects/Envizo', false, /\.(png|jpe?g|svg)$/));
+const stonksImages = importAll(require.context('../assets/projects/Stonks', false, /\.(png|jpe?g|svg)$/));
+console.log(bbImages)
 const projects = [
     {
       title:"Envizo",
