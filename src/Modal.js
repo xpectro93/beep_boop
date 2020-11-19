@@ -2,7 +2,7 @@ import "./CSS/Modal.css"
 import "nes.css/css/nes.min.css";
 import { motion }  from 'framer-motion'; 
 
-const buttonCss ={background:"white",width:"50%",margin:"auto"}
+const buttonCss ={background:"white",width:"50%",margin:"1vh auto"}
 
 export default function Modal (props) {
     return(

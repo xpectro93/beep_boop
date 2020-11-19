@@ -117,9 +117,18 @@ export default function Content () {
             )}
                 
         <div className="social" style={{display:"flex", justifyContent:"space-around"}}>
-            <a href="https://www.linkedin.com/in/xpectro93/" rel="noreferrer" target="_blank"><img src={linkedin} alt={"linkedin"}/></a>
-            <a href="https://github.com/xpectro93" rel="noreferrer" target="_blank" ><img src={github} alt={"github"}/></a>
-            <a href="" target="_blank" ><img src={resume} alt={"resume"}/></a>
+            <a href="https://www.linkedin.com/in/xpectro93/" rel="noreferrer" target="_blank">
+                <img src={linkedin} alt={"linkedin"}/>
+                <span>LinkedIn</span>
+            </a>
+            <a href="https://github.com/xpectro93" rel="noreferrer" target="_blank" >
+                <img src={github} alt={"github"}/>
+                <span>Github</span>
+            </a>
+            <a href="" target="_blank" >
+                <img src={resume} alt={"resume"}/>
+                <span>Resume</span>
+                </a>
         </div>   
         </ul>
         
