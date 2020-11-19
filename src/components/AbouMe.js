@@ -7,7 +7,7 @@ const buttonCss = {
     border:"2px solid var(--off-color)",
     padding:"0.5rem"
 }
-export default function AboutMe (select) {
+export default function AboutMe ({select}) {
     return(
         <div className ="about-me overflow">
           <h1 className="retro">Let me introduce myself</h1>

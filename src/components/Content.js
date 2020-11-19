@@ -28,11 +28,11 @@ const contentObject ={
     images:pixel_me
 },
 "About me": {
-    content: <AboutMe/>,
+    content: (x) =><AboutMe selected={x}/>,
     images:wave
 },
 "Contact me":{
-    content:<ContactMe/>,
+    content: <ContactMe />,
     images:email
 },
 "Technologies": {
@@ -69,6 +69,7 @@ export default function Content () {
 
     }, [])
     const sml_ul_css  = isMobile ? "1vh auto" : "auto" 
+    const renderino = selected === "About me" ? <AboutMe select={setSelected}/> : contentObject[selected]["content"]
     return (
          <div className="nes-container  is-dark  content" 
             style={{margin:" 2vh auto",padding:"0px", height:"70vh", backgroundColor:"transparent"}}>
@@ -93,7 +94,7 @@ export default function Content () {
             exit={{ x: -300, opacity: 0 }}
             variants={variants}>
 
-        {selected === "" ? null :<Modal select={setSelected}>{contentObject[selected]["content"]}</Modal> }
+        {selected === "" ? null :<Modal select={setSelected}>{renderino}</Modal> }
         <ul  className="nes-container is-dark is-centered with-title list-menu" style={{listStyle: "none",margin:sml_ul_css}}>
         <p className="title">MENU</p>
             {menuItems.map(item =>  {
