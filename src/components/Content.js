@@ -28,19 +28,19 @@ const contentObject ={
     images:pixel_me
 },
 "About me": {
-    content: AboutMe,
+    content: <AboutMe/>,
     images:wave
 },
 "Contact me":{
-    content:ContactMe,
+    content:<ContactMe/>,
     images:email
 },
 "Technologies": {
-    content:Technologies,
+    content:<Technologies/>,
     images: tech
 },
 "Projects": {
-    content:Projects,
+    content:<Projects/>,
     images:myThings
 }
 }
@@ -93,7 +93,7 @@ export default function Content () {
             exit={{ x: -300, opacity: 0 }}
             variants={variants}>
 
-        {selected === "" ? null :<Modal select={setSelected}>{contentObject[selected]["content"](setSelected)}</Modal> }
+        {selected === "" ? null :<Modal select={setSelected}>{contentObject[selected]["content"]}</Modal> }
         <ul  className="nes-container is-dark is-centered with-title list-menu" style={{listStyle: "none",margin:sml_ul_css}}>
         <p className="title">MENU</p>
             {menuItems.map(item =>  {

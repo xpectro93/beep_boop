@@ -8,7 +8,6 @@ const buttonCss = {
     padding:"0.5rem"
 }
 export default function AboutMe (select) {
-    console.log(select)
     return(
         <div className ="about-me overflow">
           <h1 className="retro">Let me introduce myself</h1>
