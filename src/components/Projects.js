@@ -1,4 +1,3 @@
-import "../CSS/Projects.css"
 import bb1 from '../assets/projects/Bluebadger/BB_1.PNG'
 import bb2 from '../assets/projects/Bluebadger/BB_2.PNG'
 import bb3 from '../assets/projects/Bluebadger/BB_3.PNG'
@@ -19,11 +18,15 @@ import path2 from '../assets/projects/Pathfinder/Pathfinder_2.PNG';
 import path3 from '../assets/projects/Pathfinder/Pathfinder_3.PNG';
 import path4 from '../assets/projects/Pathfinder/Pathfinder_4.PNG';
 
+import { useState } from "react";
+
+import "../CSS/Projects.css"
+import Modal from "../Modal.js"
 
 const projects = [
     {
       title:"Envizo",
-      text:"Blah environment blah",
+      text:"Blah environment blah lorem ipsom dorolis omg im in such much emotion paina mauahahahahhahah",
       images:[evz1, evz2, evz3, evz4],
       github:"https://github.com/xpectro93/myEnvizo",
       live:"https://myenvizo.herokuapp.com/"
@@ -53,6 +56,7 @@ const projects = [
 
 
 export default function Projects () {
+    const [select, setSelect ] = useState('')
     return (
         <div className="projects overflow">
             {
@@ -60,10 +64,13 @@ export default function Projects () {
                     return(
                         <div className="project" key={i}>
                             <h3 className="retro">{project.title}</h3>
-                            {project.images.map(img => <img style={{width:"100px"}}src={img} alt="something cool" />)}
+                            {project.images.map((img,j) => {
+                            
+                                return(<img style={{width:"100px"}}src={img} key={`${project.title}-${j}`}alt="something cool" />)
+                            })}
                             <p>{project.text}</p>
                             <a href={project.github}  rel="noreferrer" target="_blank">Github</a>
-                            <a href={project.link}  rel="noreferrer" target="_blank">Live Link</a>
+                            <a href={project.live}  rel="noreferrer" target="_blank">Live Link</a>
 
                         </div>
                     )
