@@ -15,8 +15,8 @@ export default function AboutMe ({select}) {
           <p>
             Ever since I got my first computer I've had a passion for computers and 
             anything tech related. While studying computer engineering, I found my passion
-            for programming. Now after joining Pursuit, I am excited to expand my skills as
-            a Full Stack Web Developer.
+            for programming.Through joining Pursuit, I expanded my skills as
+            a FullStack Web Developer. After
          </p>
          <button className="retro" style={buttonCss}onClick={()=>select("Contact me")}>Get in touch</button>
         </div>

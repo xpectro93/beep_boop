@@ -44,7 +44,7 @@ const contentObject ={
     images:myThings
 }
 }
-const menuItems = ["About me","Contact me", "Technologies","Projects"];
+const menuItems = ["About me", "Technologies","Projects", "Contact me"];
 const variants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1 },
