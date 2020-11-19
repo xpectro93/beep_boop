@@ -125,7 +125,5 @@ export default function Content () {
         
     )
 }
-/*
-    Change left side gif for each tab selected from menu
-*/
+
 
