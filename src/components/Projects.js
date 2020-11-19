@@ -19,59 +19,69 @@ import path3 from '../assets/projects/Pathfinder/Pathfinder_3.PNG';
 import path4 from '../assets/projects/Pathfinder/Pathfinder_4.PNG';
 
 import { useState } from "react";
-
 import "../CSS/Projects.css"
 import Modal from "../Modal.js"
-
-const projects = [
-    {
+const projects = {
+    "Envizo": {
       title:"Envizo",
       text:"Blah environment blah lorem ipsom dorolis omg im in such much emotion paina mauahahahahhahah",
       images:[evz1, evz2, evz3, evz4],
       github:"https://github.com/xpectro93/myEnvizo",
       live:"https://myenvizo.herokuapp.com/"
     },
-    {
+   "Bluebadger": {
       title:"Bluebadger",
       text:"I hate my life",
       images:[bb1,bb2,bb3,bb4],
       github:"https://github.com/xpectro93/BB-Den",
       live:"http://bluebadger.army/"
     },
-    {
+    "Stonks": {
       title:"Stonks",
       text:"Meme profits are going up",
       images:[stnk1,stnk2,stnk3,stnk4],
       github:"https://github.com/xpectro93/TTP_Fullstack",
       live:"http://ttp-fs-jonathanandrade.herokuapp.com/"
     },
-    {
+    "Pathfinder": {
       title:"Pathfinder",
       text:"Finds the path",
       images:[path1,path2,path3,path4],
       github:"https://github.com/xpectro93/Pathfinder",
       live:"https://xpectro93.github.io/Pathfinder"
-    },
-]
+    }
+}
 
 
 export default function Projects () {
-    const [select, setSelect ] = useState('')
+
+    const [ selectImg, setSelectImg ] = useState("");
+    const [pro, setPro ] = useState("")
+    let projectsKeys = Object.keys(projects);
     return (
         <div className="projects overflow">
             {
-                projects.map((project,i) => {
+                projectsKeys.map((project,i) => {
+         
                     return(
                         <div className="project" key={i}>
-                            <h3 className="retro">{project.title}</h3>
-                            {project.images.map((img,j) => {
-                            
-                                return(<img style={{width:"100px"}}src={img} key={`${project.title}-${j}`}alt="something cool" />)
-                            })}
-                            <p>{project.text}</p>
-                            <a href={project.github}  rel="noreferrer" target="_blank">Github</a>
-                            <a href={project.live}  rel="noreferrer" target="_blank">Live Link</a>
+                            <h3 className="retro">{projects[project].title}</h3>
 
+                            {projects[project].images.map((img,j) => {
+                             return(<img onClick={()=>{
+                                setPro(project) 
+                                setSelectImg(j)} }style={{width:"100px",height:"100px",objectFit:"cover"}}src={img} key={`${projects[project].title}-${j}`}alt="something cool" />)
+                            })}
+                            {selectImg === "" || pro ==="" ?  null :
+                                <Modal select={setSelectImg}>
+                                    {console.log(project, selectImg)}
+                                    <img className="overflow"style={{width:"500px"}}src={projects[pro].images[selectImg]} />
+                                </Modal> }
+
+                            <p>{projects[project].text}</p>
+                            <a href={projects[project].github}  rel="noreferrer" target="_blank">Github</a>
+                            <a href={projects[project].live}  rel="noreferrer" target="_blank">Live Link</a>
+                           
                         </div>
                     )
                 })
@@ -79,3 +89,6 @@ export default function Projects () {
         </div>
     )
 }
+
+//return(<img style={{width:"100px",objectFit:"cover"}}src={img} key={`${project.title}-${j}`}alt="something cool" />)
+ 
