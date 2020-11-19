@@ -1,15 +1,30 @@
 import "../CSS/Projects.css"
-function importAll(r) {
-    let images = {};
-    r.keys().map((item) => images[item.replace('./', '')] = r(item));
-    return images;
-  }
-  
-const bbImages = importAll(require.context('../assets/projects/Bluebadger', false, /\.(png|jpe?g|svg)$/));
-const pathImages = importAll(require.context('../assets/projects/Pathfinder', false, /\.(png|jpe?g|svg)$/));
-const envizoImages = importAll(require.context('../assets/projects/Envizo', false, /\.(png|jpe?g|svg)$/));
-const stonksImages = importAll(require.context('../assets/projects/Stonks', false, /\.(png|jpe?g|svg)$/));
-console.log(bbImages)
+import bb1 from '../assets/projects/Bluebadger/BB_1.PNG'
+import bb2 from '../assets/projects/Bluebadger/BB_2.PNG'
+import bb3 from '../assets/projects/Bluebadger/BB_3.PNG'
+import bb4 from '../assets/projects/Bluebadger/BB_4.PNG'
+
+import evz1 from '../assets/projects/Envizo/Envizo_1.PNG'
+import evz2 from '../assets/projects/Envizo/Envizo_2.PNG'
+import evz3 from '../assets/projects/Envizo/Envizo_3.PNG'
+import evz4 from '../assets/projects/Envizo/Envizo_4.PNG';
+
+import stnk1 from '../assets/projects/Stonks/Stonks_1.PNG';
+import stnk2 from '../assets/projects/Stonks/Stonks_2.PNG';
+import stnk3 from '../assets/projects/Stonks/Stonks_3.PNG';
+import stnk4 from '../assets/projects/Stonks/Stonks_4.PNG';
+
+import path1 from '../assets/projects/Pathfinder/Pathfinder_1.PNG';
+import path2 from '../assets/projects/Pathfinder/Pathfinder_2.PNG';
+import path3 from '../assets/projects/Pathfinder/Pathfinder_3.PNG';
+import path4 from '../assets/projects/Pathfinder/Pathfinder_4.PNG';
+
+
+
+
+
+
+// let keys = Object.keys();
 const projects = [
     {
       title:"Envizo",
