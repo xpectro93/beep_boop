@@ -13,7 +13,7 @@ import myThings from '../assets/projects.gif'
 import resume from "../assets/resume.png";
 import linkedin from "../assets/linkedin.png";
 import github from "../assets/technologies/8_Github.png";
-
+import resumepdf from "../assets/Nov2020.pdf";
 //component Import
 import Modal from '../Modal.js';
 
@@ -125,7 +125,7 @@ export default function Content () {
                 <img src={github} alt={"github"}/>
                 <span>Github</span>
             </a>
-            <a href="" target="_blank" >
+            <a href={resumepdf} rel="noreferrer" target="_blank" >
                 <img src={resume} alt={"resume"}/>
                 <span>Resume</span>
                 </a>
