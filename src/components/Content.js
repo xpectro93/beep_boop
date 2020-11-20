@@ -7,7 +7,7 @@ import wave from "../assets/wave.gif";
 import pixel_me from "../assets/pixel_me.gif";
 import email from "../assets/email.gif";
 import tech from "../assets/floating_tech.gif"
-import myThings from '../assets/test.gif'
+import myThings from '../assets/projects.gif'
 
 //social
 import resume from "../assets/resume.png";
