@@ -1,4 +1,4 @@
-#main-banner {
+/* #main-banner {
     display:flex;
     background-image:url("../assets/buidings.gif");
     background-position: center;
@@ -12,7 +12,36 @@
     flex-flow:row wrap;
 
     height:25vh;
+
+    Code in case this panoram looks badd :<
+} */
+
+#main-banner {
+    display:flex;
+    background-image:
+        url("../assets/fence.png"),
+        url("../assets/train.gif"),
+        url("../assets/buidings.gif");
+
+    background-position: 
+        0 0,
+        -10000px 50%,
+        0 0
+    ;
+    background-repeat: repeat-x;
+    background-size: 
+       cover;
+    image-rendering: pixelated;
+    animation: 120s panorama infinite linear;
+    justify-content:space-around;
+    align-items:center;
+    width:100%;
+    flex-flow:row wrap;
+
+    height:25vh;
 }
+
+
 #name-container > h1 {
     color: red;
     margin: 0 auto;
@@ -55,7 +84,11 @@
 
 @keyframes panorama {
     100% {
-        background-position: -5000px 0%;
+        background-position: 
+        -3000px 0%,
+        0px 0,
+        -5000px 0%
+         
     }
 }
 
