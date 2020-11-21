@@ -14,11 +14,10 @@
   box-sizing: border-box;
 }
 button {
-  background-color: Transparent;
+    background-color: transparent;
     background-repeat:no-repeat;
     border: none;
     cursor:pointer;
-    overflow: hidden;
     outline:none;
 }
 body {

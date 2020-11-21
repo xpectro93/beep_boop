@@ -1,5 +1,8 @@
 .project {
+    display:flex;
+    flex-flow: wrap column;
     border: 1px solid var(--off-color);
+    align-items: center;
     box-shadow: 0px 0px 5px 1px var(--off-color);
     margin:1vh auto;
     padding:1vh
@@ -11,6 +14,7 @@
      margin:5px; 
      padding:3px;
      border:1px solid var(--off-color);
+     width:40%;
 }
 .project a:hover {
     color:var(--off-color)
@@ -21,5 +25,8 @@
     }
     .project p {
         font-size: 10px;
+    }
+    .project a {
+        width:100%;
     }
 }
