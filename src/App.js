@@ -21,7 +21,7 @@ function App() {
           </Route>
           <Route path="*">
             <div style={{color:"white",margin:"auto"}}>
-              ERROR ERROR BOOP BOOP
+              ERROR ERROR BOOP BOOP <br/>404 <br/> not found
             </div>
           </Route>
 
