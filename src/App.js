@@ -2,6 +2,7 @@ import './App.css';
 
 import Content from './components/Content.js'
 import Banner from './components/Banner.js';
+import Error from "./Error.js";
 import { Route, Switch } from "react-router-dom";
 
 import { AnimatePresence } from "framer-motion";
@@ -20,9 +21,7 @@ function App() {
            <Content/>
           </Route>
           <Route path="*">
-            <div style={{color:"white",margin:"auto"}}>
-              ERROR ERROR BOOP BOOP <br/>404 <br/> not found
-            </div>
+            <Error/>
           </Route>
 
 

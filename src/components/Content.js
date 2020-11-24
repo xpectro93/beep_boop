@@ -29,7 +29,8 @@ const contentCSS = {
     margin:" 2vh auto",
     padding:"0px",
     height:"70vh",
-    backgroundColor:"transparent"
+    backgroundColor:"transparent",
+    alignItems:"center"
 }
 
 
