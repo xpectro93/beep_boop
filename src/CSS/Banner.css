@@ -85,9 +85,9 @@
 @keyframes panorama {
     100% {
         background-position: 
-        -3000px 0%,
+        -5000px 0%,
         0px 0,
-        -5000px 0%
+        -1300px 0%
          
     }
 }
