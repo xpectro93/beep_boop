@@ -25,6 +25,12 @@ import Start from "./Start.js"
 
 import Footer from "./Footer.js";
 
+const contentCSS = {
+    margin:" 2vh auto",
+    padding:"0px",
+    height:"70vh",
+    backgroundColor:"transparent"
+}
 
 
 const contentObject ={
@@ -77,7 +83,7 @@ export default function Content () {
     const renderino = selected === "About me" ? <AboutMe select={setSelected}/> : contentObject[selected]["content"]
     return (
          <div className="nes-container  is-dark  content" 
-            style={{margin:" 2vh auto",padding:"0px", height:"70vh", backgroundColor:"transparent"}}>
+            style={contentCSS}>
         { hasStarted ? 
         <>
         <div id="titulo" className="retro">{selected}</div>
