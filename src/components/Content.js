@@ -82,8 +82,9 @@ export default function Content () {
     }, [])
     const sml_ul_css  = isMobile ? "1vh auto" : "auto" 
     const renderino = selected === "About me" ? <AboutMe select={setSelected}/> : contentObject[selected]["content"]
+    console.log('selected ', selected)
     return (
-         <div className="nes-container  is-dark  content" 
+         <div className="content" 
             style={contentCSS}>
         { hasStarted ? 
         <>
