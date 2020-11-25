@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <div className="background-static"></div>
       <AnimatePresence initial={true} exitBeforeEnter>
-
+        
         <div className="main-wrapper" key={"main-wrapper"}>
           <Banner/>
 
