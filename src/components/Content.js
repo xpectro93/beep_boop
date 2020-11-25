@@ -25,15 +25,6 @@ import Start from "./Start.js"
 
 import Footer from "./Footer.js";
 
-const contentCSS = {
-    margin:" 2vh auto",
-    padding:"0px",
-    height:"70vh",
-    backgroundColor:"transparent",
-    alignItems:"center"
-}
-
-
 const contentObject ={
 "":{
     content: function lol(){return ''},
@@ -85,10 +76,15 @@ export default function Content () {
     console.log('selected ', selected)
     return (
          <div className="content" 
-            style={contentCSS}>
+            style={{
+                margin:" 2vh auto",
+                padding:"0px",
+                height:"70vh",
+                backgroundColor:"transparent",
+                alignItems:"center"
+            }}>
         { hasStarted ? 
         <>
-        <div id="titulo" className="retro">{selected}</div>
         <motion.div className="left"
             initial={{x:-300, opacity:0}}
             animate={{x:0, opacity:1}}
@@ -109,7 +105,7 @@ export default function Content () {
 
         {selected === "" ? null :<Modal select={setSelected}>{renderino}</Modal> }
         <ul  className="nes-container is-dark is-centered with-title list-menu" style={{listStyle: "none",margin:sml_ul_css}}>
-        <p className="title">MENU</p>
+        <p className="title">{selected?selected:"MENU"}</p>
             {menuItems.map(item =>  {
                 return (
                     <div className="item" key={`${item}-i`}>
