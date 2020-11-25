@@ -105,7 +105,7 @@ export default function Content () {
 
         {selected === "" ? null :<Modal select={setSelected}>{renderino}</Modal> }
         <ul  className="nes-container is-dark is-centered with-title list-menu" style={{listStyle: "none",margin:sml_ul_css}}>
-        <p className="title">{selected?selected:"MENU"}</p>
+        <p className="title retro">{selected?selected:"MENU"}</p>
             {menuItems.map(item =>  {
                 return (
                     <div className="item" key={`${item}-i`}>
