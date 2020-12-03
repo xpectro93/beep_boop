@@ -62,11 +62,16 @@
 ul {
     list-style: none;
     margin:auto;
-    box-shadow: 0px 0px 10px var(--main-color);
+    /* overflow: hidden; */
+    max-width: max-content;
+    box-shadow: 0px 0px 10px var(--main-color);z-index:19 !important;
+    
 }
 
+
+
 li {
-    margin: 15px auto;
+    margin: 13px auto;
     font-family: var(--font-main);
     color: white;
     opacity: 0.7;
@@ -75,9 +80,11 @@ li {
     transition: border-bottom 0.7s ease;
 }
 li::before {
-  content: "‎　 "
+  visibility: hidden;
+  content: "▶ "
 }
 li:hover::before {
+  visibility: visible;
   content: "▶ ";
   color: white;
   opacity: 0.7;
@@ -86,7 +93,6 @@ li:hover::before {
 }
 
 li:hover, .btn:hover {
-
     opacity: 0.9;
     animation: beat 1.15s linear infinite alternate;
   }
@@ -95,13 +101,13 @@ li:hover, .btn:hover {
       transform: scale(1.05);
     }
     25% {
-      transform: scale(1.15);
+      transform: scale(1.10);
     }
     50% {
-      transform: scale(1.25);
+      transform: scale(1.15);
     }
     75% {
-      transform: scale(1.15);
+      transform: scale(1.10);
     }
     100% {
       transform: scale(1.05);
