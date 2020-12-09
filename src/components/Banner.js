@@ -23,7 +23,7 @@ export default function Banner () {
 
 
                 <h1 className="retro">Andrade</h1>
-                <h2>FullStack Web Developer</h2>
+                <h2>Full Stack Web Developer</h2>
             </div>
         </motion.div>
     )

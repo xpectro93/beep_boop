@@ -13,7 +13,7 @@ export default function AboutMe ({select}) {
           <h1 className="retro">Let me introduce myself</h1>
           <p>Jonathan Andrade is the name. Coding is my game</p>
           <p>
-            I'm a software developer based in NYC, specializing in building FullStack Web Applications. 
+            I'm a software developer based in NYC, specializing in building Full Stack Web Applications. 
             I really enjoy learning new things, but I also enjoy teaching others.  
     
          </p>
