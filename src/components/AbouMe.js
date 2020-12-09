@@ -14,7 +14,7 @@ export default function AboutMe ({select}) {
           <p>Jonathan Andrade is the name. Coding is my game</p>
           <p>
             I'm a software developer based in NYC, specializing in building Full Stack Web Applications. 
-            I really enjoy learning new things, but I also enjoy teaching others.  
+            I really enjoy learning new technologies, but I also enjoy teaching others.   
     
          </p>
          <button className="retro" style={buttonCss}onClick={()=>select("Contact me")}>Get in touch</button>
