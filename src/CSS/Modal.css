@@ -15,5 +15,11 @@
     color:var(--text-color);
  };
 
-
+.modal-button {
+    background:white;
+    width:50%;
+    margin:1vh auto;
+    height:min-content;
+    font-size:15px
+}
 
