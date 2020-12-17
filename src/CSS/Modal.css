@@ -15,11 +15,11 @@
     color:var(--text-color);
  };
 
-.modal-button {
-    background:white;
-    width:50%;
-    margin:1vh auto;
-    height:min-content;
-    font-size:15px
-}
+/* .modal-button {
+    background:white !important;
+    width:50%  !important;
+    margin:1vh auto  !important;
+    height:min-content  !important;
+    font-size:15px  !important;
+} */
 
